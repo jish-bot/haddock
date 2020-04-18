@@ -23,7 +23,6 @@ import GHC.Utils.Panic      ( panic )
 import GHC.Driver.Ppr       ( showSDoc )
 import GHC.Types.SrcLoc
 import GHC.Data.StringBuffer ( StringBuffer, atEnd )
-import GHC.Unit              ( homeUnitId )
 
 import Haddock.Backends.Hyperlinker.Types as T
 import Haddock.GhcUtils
