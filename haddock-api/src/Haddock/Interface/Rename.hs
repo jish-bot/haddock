@@ -504,7 +504,7 @@ renameCon ConDeclGADT { con_names = lnames, con_qvars = ltyvars
 
 renameHsScaled :: HsScaled GhcRn (LHsType GhcRn)
                -> RnM (HsScaled DocNameI (LHsType DocNameI))
-renameHsScaled (HsScaled w ty) = HsScaled <$> renameArrow w <*> renameLType ty
+renameHsScaled (HsScaled u w ty) = HsScaled u <$> renameArrow w <*> renameLType ty
 
 renameDetails :: HsConDeclDetails GhcRn -> RnM (HsConDeclDetails DocNameI)
 renameDetails (RecCon (L l fields)) = do

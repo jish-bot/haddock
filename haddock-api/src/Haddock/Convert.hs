@@ -51,6 +51,7 @@ import GHC.Utils.Panic ( assertPanic )
 import GHC.Types.Var
 import GHC.Types.Var.Set
 import GHC.Types.SrcLoc
+import GHC.Parser.Annotation (IsUnicodeSyntax(..))
 
 import Haddock.Types
 import Haddock.Interface.Specialize
@@ -633,7 +634,7 @@ synifyType _ vs       (FunTy VisArg w t1 t2) = let
   s1 = synifyType WithinType vs t1
   s2 = synifyType WithinType vs t2
   w' = synifyMult vs w
-  in noLoc $ HsFunTy noExtField w' s1 s2
+  in noLoc $ HsFunTy NormalSyntax w' s1 s2
 synifyType s vs forallty@(ForAllTy (Bndr _ argf) _ty) =
   case argf of
     Required    -> synifyVisForAllType vs forallty
