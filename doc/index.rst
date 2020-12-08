@@ -1,5 +1,5 @@
-Welcome to Haddock's documentation!
-===================================
+Haskell app using HTTP requests and a database
+==============================================
 
 This is Haddock, a tool for automatically generating documentation from
 annotated Haskell source code.
